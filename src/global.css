@@ -8,10 +8,12 @@
     @apply scroll-smooth;
   }
   body {
-    @apply dark:bg-black bg-white;
+    @apply dark:bg-black bg-white dark:text-white text-black;
+    @apply text-xl leading-relaxed;
   }
-  main {
-    @apply m-auto p-4 w-[800px] dark:text-white text-black text-xl leading-relaxed;
+  main,
+  nav {
+    @apply m-auto p-4 w-[800px];
   }
 
   /* #region  /**=========== Typography =========== */

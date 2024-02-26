@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IoSunny, IoMoon } from "react-icons/io5";
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState<string>(
-    localStorage.getItem("theme") ?? "light"
-  );
+  const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
 
   const [isMounted, setIsMounted] = useState<boolean>(false);
 

@@ -13,10 +13,10 @@ const getTheme = (): Theme => {
 
 const theme: Theme = getTheme();
 
-if (theme === "light") {
-  document.documentElement.classList.remove("dark");
-} else {
-  document.documentElement.classList.add("dark");
-}
+document.addEventListener("astro:after-swap", () => {
+  localStorage.theme === "dark"
+    ? document.documentElement.classList.add("dark")
+    : document.documentElement.classList.add("light");
+});
 
 window.localStorage.setItem("theme", theme);
