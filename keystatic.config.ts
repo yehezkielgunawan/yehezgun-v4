@@ -12,8 +12,17 @@ export default config({
       path: "src/content/posts/*",
       format: { contentField: "content" },
       schema: {
-        title: fields.slug({ name: { label: "Title" } }),
-        heroImage: fields.image({ label: "Hero Image" }),
+        title: fields.slug({
+          name: { label: "Title" },
+        }),
+        heroImage: fields.image({
+          label: "Hero Image",
+          validation: { isRequired: true },
+        }),
+        publishDate: fields.date({
+          label: "Publish Date",
+        }),
+        shortDesc: fields.text({ label: "Short Description", multiline: true }),
         content: fields.document({
           label: "Content",
           formatting: true,
@@ -21,6 +30,25 @@ export default config({
           links: true,
           images: true,
         }),
+      },
+    }),
+    projects: collection({
+      label: "Projects",
+      slugField: "name",
+      path: "src/content/projects/*",
+      schema: {
+        name: fields.text({ label: "Project Name" }),
+        projectDesc: fields.text({
+          label: "Project Description",
+          multiline: true,
+        }),
+        projectIcon: fields.image({ label: "Project Icon" }),
+        projectHeroImage: fields.image({ label: "Project Hero Image" }),
+        stacks: fields.array(fields.text({ label: "Tech Stack Icon Name" }), {
+          label: "Tech Stack Icon Name",
+          itemLabel: props => props.value,
+        }),
+        projectUrl: fields.text({ label: "Project Link" }),
       },
     }),
   },
