@@ -57,6 +57,9 @@ export default config({
           itemLabel: props => props.value,
         }),
         projectUrl: fields.text({ label: "Project Link" }),
+        isFeatured: fields.checkbox({
+          label: "Want to featured this project?",
+        }),
       },
     }),
   },
