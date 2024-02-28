@@ -1,0 +1,38 @@
+---
+import ThemeToggle from "./ThemeToggle";
+
+const menuList = [
+  {
+    name: "Home",
+    url: "/",
+  },
+  {
+    name: "Projects",
+    url: "/projects",
+  },
+  {
+    name: "Blog",
+    url: "/blog",
+  },
+  {
+    name: "About Me",
+    url: "/aboutme",
+  },
+];
+---
+
+<nav class="flex items-center justify-between">
+  <div class="flex items-center gap-4">
+    {
+      menuList.map(item => (
+        <a
+          href={item.url}
+          class="font-bold hover:bg-gradient-to-r from-primary-200 to-primary-500 rounded-md dark:from-primary-500 dark:to-primary-800"
+        >
+          {item.name}
+        </a>
+      ))
+    }
+  </div>
+  <ThemeToggle client:load />
+</nav>

@@ -22,6 +22,7 @@ export default {
       },
       black: colors.black,
       white: colors.white,
+      ...colors,
     },
     extend: {
       fontFamily: {
