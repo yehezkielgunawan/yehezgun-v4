@@ -22,6 +22,14 @@ export default config({
         publishDate: fields.date({
           label: "Publish Date",
         }),
+        blogType: fields.select({
+          label: "Blog Type",
+          options: [
+            { label: "Random", value: "random" },
+            { label: "Technical", value: "technical" },
+          ],
+          defaultValue: "random",
+        }),
         shortDesc: fields.text({ label: "Short Description", multiline: true }),
         content: fields.document({
           label: "Content",
