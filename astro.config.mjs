@@ -11,4 +11,7 @@ export default defineConfig({
   integrations: [tailwind(), react(), markdoc(), keystatic()],
   output: "hybrid",
   adapter: cloudflare(),
+  markdown: {
+    syntaxHighlight: "shiki",
+  },
 });

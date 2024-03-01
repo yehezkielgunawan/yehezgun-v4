@@ -56,6 +56,12 @@
   blockquote {
     @apply text-sm italic font-normal md:text-base;
   }
+  code {
+    @apply rounded bg-slate-200 p-0.5 dark:bg-slate-700;
+  }
+  blockquote {
+    @apply rounded-md bg-cyan-100 px-2 py-1 dark:bg-cyan-800 text-black dark:text-white  border-l-8 border-primary-400 dark:border-primary-300 shadow-md dark:shadow-gray-400 my-6;
+  }
   /* #endregion */
 }
 
