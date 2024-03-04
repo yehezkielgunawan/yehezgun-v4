@@ -13,5 +13,9 @@ export default defineConfig({
   adapter: cloudflare(),
   markdown: {
     syntaxHighlight: "shiki",
+    shikiConfig: {
+      theme: "one-dark-pro",
+      wrap: true,
+    },
   },
 });

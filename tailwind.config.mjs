@@ -26,7 +26,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
+        sans: ["IBM Plex Mono", ...defaultTheme.fontFamily.mono],
       },
     },
   },
