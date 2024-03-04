@@ -8,7 +8,12 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), markdoc(), keystatic()],
+  integrations: [
+    tailwind(),
+    react(),
+    markdoc(),
+    process.env.SKIP_KEYSTATIC ? null : keystatic(),
+  ],
   output: "hybrid",
   adapter: cloudflare(),
   markdown: {
