@@ -21,14 +21,11 @@ const menuList = [
 ];
 ---
 
-<nav class="flex items-center justify-between">
+<nav class="flex items-center justify-between border-b">
   <div class="flex items-center gap-4">
     {
       menuList.map(item => (
-        <a
-          href={item.url}
-          class="font-bold hover:bg-gradient-to-r from-primary-200 to-primary-500 rounded-md dark:from-primary-500 dark:to-primary-800"
-        >
+        <a href={item.url} class="font-bold">
           {item.name}
         </a>
       ))
