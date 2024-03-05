@@ -1,7 +1,7 @@
 {
   "name": "Yehez Docs",
   "projectDesc": "A personalized docs site to put my personal notes and most used tools. Built with Nextra base template.",
-  "projectIcon": "projectIcon.png",
+  "projectIcon": "/src/content/projects/yehez-docs/projectIcon.png",
   "stacks": [
     "nextjs"
   ],

@@ -51,10 +51,17 @@ export default config({
           label: "Project Description",
           multiline: true,
         }),
-        projectIcon: fields.image({ label: "Project Icon" }),
+        projectIcon: fields.image({
+          label: "Project Icon",
+          validation: { isRequired: true },
+          directory: "src/content/projects/",
+          publicPath: "../",
+        }),
         projectHeroImage: fields.image({
           label: "Project Hero Image",
           validation: { isRequired: false },
+          directory: "src/content/projects/",
+          publicPath: "/src/content/projects/",
         }),
         stacks: fields.array(fields.text({ label: "Tech Stack Icon Name" }), {
           label: "Tech Stack Icon Name",

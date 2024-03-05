@@ -1,7 +1,7 @@
 {
   "name": "Research Paper (Bachelor Thesis)",
   "projectDesc": "A research paper from my past final thesis about Word Embedding using FastText.",
-  "projectIcon": "projectIcon.png",
+  "projectIcon": "/src/content/projects/research-paper-bachelor-thesis/projectIcon.png",
   "stacks": [
     "python"
   ],

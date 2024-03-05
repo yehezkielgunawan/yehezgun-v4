@@ -1,8 +1,8 @@
 {
   "name": "WA Helper",
   "projectDesc": "A web app to save your time to directly send the WhatsApp Chat without saving the phone number.",
-  "projectIcon": "projectIcon.png",
-  "projectHeroImage": "projectHeroImage.jfif",
+  "projectIcon": "/src/content/projects/wa-helper/projectIcon.png",
+  "projectHeroImage": "/src/content/projects/wa-helper/projectHeroImage.jfif",
   "stacks": [
     "react",
     "nextjs",

@@ -2,6 +2,7 @@
 import Layout from "layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import CurrentFavoriteTechStacks from "components/CurrentFavoriteTechStacks.tsx";
+import { Image } from "astro:assets";
 
 const featuredProjects = await getCollection("projects", ({ data }) => {
   return data.isFeatured;
@@ -47,11 +48,9 @@ const featuredProjects = await getCollection("projects", ({ data }) => {
               href={project.data.projectUrl}
               target="_blank"
             >
-              <img
-                src={`src/content/${project.collection}/${project.id}/${project.data.projectHeroImage}`}
-                alt="project-hero"
-                class="bg-center"
-              />
+              {project.data.projectHeroImage && (
+                <Image src={project.data.projectHeroImage} alt="project-hero" />
+              )}
               <h5 class="absolute bottom-0 p-0.5 left-1/2 -translate-x-1/2 w-full bg-slate-700/60 text-white group-hover:underline group-hover:underline-offset-4 group-hover:decoration-dashed">
                 {project.data.name}
               </h5>

@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-yehezgun",
   "projectDesc": "This is a personalized ESLint rule for me actually. But I made it public so other people can use it too.",
-  "projectIcon": "projectIcon.png",
+  "projectIcon": "/src/content/projects/eslint-config-yehezgun/projectIcon.png",
   "stacks": [
     "npm",
     "eslint"

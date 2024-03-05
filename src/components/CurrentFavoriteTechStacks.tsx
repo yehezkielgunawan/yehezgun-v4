@@ -1,5 +1,3 @@
-import { Popover } from "@headlessui/react";
-import React from "react";
 import { FaReact } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
 
