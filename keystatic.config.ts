@@ -44,14 +44,18 @@ export default config({
       label: "Projects",
       slugField: "name",
       path: "src/content/projects/*",
+      format: { data: "json" },
       schema: {
-        name: fields.text({ label: "Project Name" }),
+        name: fields.slug({ name: { label: "Project Name" } }),
         projectDesc: fields.text({
           label: "Project Description",
           multiline: true,
         }),
         projectIcon: fields.image({ label: "Project Icon" }),
-        projectHeroImage: fields.image({ label: "Project Hero Image" }),
+        projectHeroImage: fields.image({
+          label: "Project Hero Image",
+          validation: { isRequired: false },
+        }),
         stacks: fields.array(fields.text({ label: "Tech Stack Icon Name" }), {
           label: "Tech Stack Icon Name",
           itemLabel: props => props.value,
