@@ -1,0 +1,10 @@
+{
+  "name": "Yehez Docs",
+  "projectDesc": "A personalized docs site to put my personal notes and most used tools. Built with Nextra base template.",
+  "projectIcon": "projectIcon.png",
+  "stacks": [
+    "nextjs"
+  ],
+  "projectUrl": "https://docs.yehezgun.com",
+  "isFeatured": false
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Bobobox Web App",
+  "projectDesc": "Created Bobobox Web App using Next.js and Tailwind CSS",
+  "projectIcon": "projectIcon.jpg",
+  "projectHeroImage": "projectHeroImage.png",
+  "stacks": [
+    "nextjs",
+    "tailwind",
+    "react"
+  ],
+  "projectUrl": "https://bobobox.com/",
+  "isFeatured": true
+}

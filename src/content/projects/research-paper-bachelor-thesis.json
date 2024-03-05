@@ -1,0 +1,10 @@
+{
+  "name": "Research Paper (Bachelor Thesis)",
+  "projectDesc": "A research paper from my past final thesis about Word Embedding using FastText.",
+  "projectIcon": "projectIcon.png",
+  "stacks": [
+    "python"
+  ],
+  "projectUrl": "https://ejournals.umn.ac.id/index.php/TI/article/view/2124",
+  "isFeatured": false
+}

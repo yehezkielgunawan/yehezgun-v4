@@ -1,0 +1,13 @@
+{
+  "name": "QR Generator",
+  "projectDesc": "A simple QR Code Generator. You can convert the web link QR Code instantly here and download it to your local device",
+  "projectIcon": "projectIcon.png",
+  "projectHeroImage": "projectHeroImage.png",
+  "stacks": [
+    "nextjs",
+    "tailwind",
+    "react"
+  ],
+  "projectUrl": "https://qr.yehezgun.com/",
+  "isFeatured": true
+}

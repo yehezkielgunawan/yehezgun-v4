@@ -1,0 +1,12 @@
+{
+  "name": "KAI Access",
+  "projectDesc": "A train ticketing mobile app. Along with my senior, we developed this app when I was a frontend developer at MacroAd",
+  "projectIcon": "projectIcon.png",
+  "projectHeroImage": "projectHeroImage.PNG",
+  "stacks": [
+    "ionic",
+    "angular"
+  ],
+  "projectUrl": "https://play.google.com/store/apps/details?id=com.kai.kaiticketing&hl=en_US&gl=US",
+  "isFeatured": true
+}

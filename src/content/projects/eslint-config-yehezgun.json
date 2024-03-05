@@ -1,0 +1,11 @@
+{
+  "name": "eslint-config-yehezgun",
+  "projectDesc": "This is a personalized ESLint rule for me actually. But I made it public so other people can use it too.",
+  "projectIcon": "projectIcon.png",
+  "stacks": [
+    "npm",
+    "eslint"
+  ],
+  "projectUrl": "https://www.npmjs.com/package/eslint-config-yehezgun",
+  "isFeatured": false
+}

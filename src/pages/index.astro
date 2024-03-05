@@ -1,10 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const featuredProjects = await getCollection("projects", ({ data }) => {
+  return data.isFeatured;
+});
 ---
 
 <Layout title="Yehezkiel Gunawan's Site">
   <main class="mt-8">
-    <div class="flex items-center justify-between">
+    <section class="flex items-center justify-between">
       <div class="space-y-4">
         <h1>
           Hi, I'm <span
@@ -29,6 +34,29 @@ import Layout from "../layouts/Layout.astro";
         loading="lazy"
         class="hidden md:block dark:bg-gray-700 bg-gray-200 rounded-full"
       />
-    </div>
+    </section>
+    <section class="space-y-4 mt-8">
+      <h2>Featured Projects</h2>
+      <div class="mt-4 grid grid-cols-1 gap-8 rounded-xl md:grid-cols-2">
+        {
+          featuredProjects.map(project => (
+            <a
+              class="hover:outline hover:outline-gray-400 dark:hover:outline-gray-100 hover:outline-offset-0 rounded space-y-2 text-center hover:-translate-y-0.5 relative group overflow-hidden"
+              href={project.data.projectUrl}
+              target="_blank"
+            >
+              <img
+                src={`src/content/${project.collection}/${project.id}/${project.data.projectHeroImage}`}
+                alt="project-hero"
+                class="bg-center"
+              />
+              <h5 class="absolute bottom-0 p-0.5 left-1/2 -translate-x-1/2 w-full bg-slate-700/60 text-white group-hover:underline group-hover:underline-offset-4 group-hover:decoration-dashed">
+                {project.data.name}
+              </h5>
+            </a>
+          ))
+        }
+      </div>
+    </section>
   </main>
 </Layout>
