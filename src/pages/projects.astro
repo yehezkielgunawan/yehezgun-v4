@@ -1,15 +1,54 @@
 ---
+import { getCollection } from "astro:content";
+import ProjectCard from "components/ProjectCard.tsx";
 import Layout from "layouts/Layout.astro";
+
+const projectList = await getCollection("projects");
 ---
 
 <Layout title="Welcome to Astro.">
   <main class="mt-8">
-    <h1 class="text-primary-200">Projects</h1>
-    <h2>Test</h2>
-    <h3>Test</h3>
-    <h4>Test</h4>
-    <h5>Test</h5>
-    <p>Test P</p>
-    <a href="/">Test</a>
+    <section class="space-y-4">
+      <h1>Projects</h1>
+      <p>This is my previous works and personal (experiements) project list.</p>
+    </section>
+    <section class="mt-8 space-y-4">
+      <h2>Featured Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {
+          projectList
+            .filter(project => project.data.isFeatured)
+            .map(project => (
+              <ProjectCard
+                projectName={project.data.name}
+                projectDesc={project.data.projectDesc}
+                projectIcon={project.data.projectIcon}
+                projectUrl={project.data.projectUrl}
+                projectStacks={project.data.stacks}
+                client:load
+              />
+            ))
+        }
+      </div>
+    </section>
+    <section class="mt-8 space-y-4">
+      <h2>Other Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-4">
+        {
+          projectList
+            .filter(project => !project.data.isFeatured)
+            .map(project => (
+              <ProjectCard
+                projectName={project.data.name}
+                projectDesc={project.data.projectDesc}
+                projectIcon={project.data.projectIcon}
+                projectUrl={project.data.projectUrl}
+                projectStacks={project.data.stacks}
+                client:load
+              />
+            ))
+        }
+      </div>
+    </section>
   </main>
 </Layout>

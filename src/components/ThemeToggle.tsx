@@ -27,7 +27,7 @@ const ThemeToggle = () => {
 
   if (!isMounted) {
     return (
-      <div className="w-6 h-6 rounded-lg animate-pulse bg-slate-200 dark:bg-slate-700"></div>
+      <div className="h-6 w-6 animate-pulse rounded-lg bg-slate-200 dark:bg-slate-700"></div>
     );
   }
 
