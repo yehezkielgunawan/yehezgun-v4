@@ -1,4 +1,3 @@
-import React from "react";
 import { formatDate } from "scripts/formatDate";
 
 type BlogCardProps = {
