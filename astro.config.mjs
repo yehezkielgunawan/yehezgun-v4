@@ -16,6 +16,7 @@ export default defineConfig({
   ],
   output: "hybrid",
   adapter: cloudflare(),
+  trailingSlash: "never",
   markdown: {
     syntaxHighlight: "shiki",
     shikiConfig: {
