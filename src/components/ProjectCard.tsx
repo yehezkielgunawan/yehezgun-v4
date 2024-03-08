@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { HiExternalLink } from "react-icons/hi";
 
 type ProjectCardProps = {
@@ -21,6 +21,36 @@ const ProjectCard = ({
   projectIcon,
   projectStacks,
 }: ProjectCardProps) => {
+  const [theme, setTheme] = useState<string>("light");
+  const [isMounted, setIsMounted] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof document !== "undefined") {
+      const classList = document.documentElement.classList;
+      const checkTheme = () => {
+        setTheme(classList.contains("dark") ? "dark" : "light");
+      };
+
+      // Initialize a MutationObserver
+      const observer = new MutationObserver(checkTheme);
+
+      // Start observing document.documentElement for changes to the 'class' attribute
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+
+      // Clean up the observer when the component unmounts
+      return () => observer.disconnect();
+    }
+  }, []);
+
+  if (!isMounted) return null;
+
   return (
     <a
       href={projectUrl}
@@ -44,7 +74,7 @@ const ProjectCard = ({
         <div className="flex items-center gap-4">
           {projectStacks.map(stack => (
             <img
-              src={`/stacks/light/${stack}.svg`}
+              src={`/stacks/${theme}/${stack}.svg`}
               alt="stack"
               width={32}
               height={32}
