@@ -18,6 +18,8 @@ export default config({
         heroImage: fields.image({
           label: "Hero Image",
           validation: { isRequired: true },
+          directory: "src/content/posts/",
+          publicPath: "/src/content/posts/",
         }),
         publishDate: fields.date({
           label: "Publish Date",
@@ -36,7 +38,10 @@ export default config({
           formatting: true,
           dividers: true,
           links: true,
-          images: true,
+          images: {
+            directory: "src/content/posts/_images",
+            publicPath: "/src/content/posts/_images/",
+          },
         }),
       },
     }),
