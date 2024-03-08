@@ -25,6 +25,7 @@ const currentURL = Astro.url.pathname;
 
 <nav class="flex items-center justify-between border-b">
   <div class="flex items-center gap-4">
+    {currentURL}
     {
       menuList.map(item => (
         <a
