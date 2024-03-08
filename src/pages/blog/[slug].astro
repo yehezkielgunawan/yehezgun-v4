@@ -1,0 +1,45 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export interface Props {
+  post: CollectionEntry<"posts">;
+}
+
+export async function getStaticPaths() {
+  const blogList = await getCollection("posts");
+  const postResult = blogList.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+  return [...postResult];
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={post.data.title}>
+  <main>
+    <h1>Halo</h1>
+    <Content />
+  </main>
+</Layout>
+
+<style is:inline>
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 16px;
+  }
+  img {
+    margin-top: 12px;
+  }
+  pre {
+    border-radius: 6px;
+    padding: 8px;
+  }
+</style>
