@@ -19,13 +19,18 @@ const menuList = [
     url: "/aboutme",
   },
 ];
+
+const currentURL = Astro.url.pathname;
 ---
 
 <nav class="flex items-center justify-between border-b">
   <div class="flex items-center gap-4">
     {
       menuList.map(item => (
-        <a href={item.url} class="font-bold">
+        <a
+          href={item.url}
+          class={`font-bold ${currentURL === item.url ? "underline decoration-dashed underline-offset-4" : ""}`}
+        >
           {item.name}
         </a>
       ))
