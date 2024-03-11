@@ -16,7 +16,6 @@
     "@astrojs/react": "^3.0.10",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/ibm-plex-mono": "^5.0.12",
-    "@headlessui/react": "^1.7.18",
     "@keystatic/astro": "^3.0.2",
     "@keystatic/core": "^0.3.19",
     "@types/react": "^18.2.57",
