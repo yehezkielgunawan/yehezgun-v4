@@ -20,7 +20,7 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<Layout title={post.data.title}>
+<Layout title={post.data.title} desc={post.data.shortDesc}>
   <main>
     <h1>Halo</h1>
     <Content />
