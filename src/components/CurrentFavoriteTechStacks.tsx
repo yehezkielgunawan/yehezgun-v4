@@ -25,9 +25,9 @@ const CurrentFavoriteTechStacks = () => {
       <h3>Current Favorite Tech Stack</h3>
       <div className="flex items-center gap-6">
         {favoriteTechStacks.map(stack => (
-          <div className="relative group">
+          <div className="group relative">
             <stack.icon size={36} />
-            <div className="opacity-0 group-hover:opacity-100 absolute -bottom-8 left-1/2 -translate-x-1/2 bg-black text-white rounded whitespace-nowrap transition-opacity duration-75">
+            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-black p-0.5 text-white opacity-0 transition-opacity duration-75 group-hover:opacity-100 dark:bg-white dark:text-black">
               <p>{stack.name}</p>
             </div>
           </div>
