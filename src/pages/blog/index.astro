@@ -6,7 +6,10 @@ import Layout from "layouts/Layout.astro";
 const articleList = await getCollection("posts");
 ---
 
-<Layout title="My Blogs">
+<Layout
+  title="My Blogs"
+  desc="Just some random thoughts or notes something I learned."
+>
   <main class="mt-8">
     <section class="space-y-4">
       <h1>Blogs</h1>
