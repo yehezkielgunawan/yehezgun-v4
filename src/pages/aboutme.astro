@@ -1,15 +1,36 @@
 ---
 import Layout from "layouts/Layout.astro";
+import ContactList from "components/ContactList.tsx";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="About Me">
   <main class="mt-8">
-    <h1 class="text-primary-200">About Me</h1>
-    <h2>Test</h2>
-    <h3>Test</h3>
-    <h4>Test</h4>
-    <h5>Test</h5>
-    <p>Test P</p>
-    <a href="/">Test</a>
+    <h1>Hello there!</h1>
+    <section
+      class="flex items-center justify-center md:justify-between gap-4 flex-wrap-reverse md:flex-nowrap mt-4"
+    >
+      <div class="space-y-4">
+        <p>
+          I'm Yehezkiel Gunawan, a front-end engineer. You can call me Yehez.
+          Mostly, I use React and its libraries while working in its ecosystem.
+          To sharpen my understanding of something, I usually push myself to
+          craft some projects and publish them here. Sometimes, I write some
+          blogs to share my experience, testimonies, or tips & tricks as a
+          frontend developer.
+        </p>
+        <p>
+          Besides of programming things, I like to explore some new tech stuff,
+          playing games sometimes, visit cosplay event, photography (using my
+          Sony a6000), and watching animes. Oh by the way, if you don't mind,
+          you can support me through Github Sponsor or Mayar.id to keep this
+          site alive and maintained.
+        </p>
+        <p class="text-sm italic">
+          Psssttt, don't expect me as a pro. I'm only a newbie here 🙏🏻
+        </p>
+      </div>
+      <img src="/yehez-profile.jpg" alt="my-profile" width="256" height="256" />
+    </section>
+    <ContactList client:load />
   </main>
 </Layout>
