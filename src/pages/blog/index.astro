@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import BlogCard from "components/BlogCard.tsx";
 import Layout from "layouts/Layout.astro";
+import BlogGrid from "components/BlogGrid";
 
 const articleList = await getCollection("posts");
 ---
@@ -27,19 +27,7 @@ const articleList = await getCollection("posts");
       </div>
     </section>
     <section class="mt-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {
-          articleList.map(article => (
-            <BlogCard
-              title={article.data.title}
-              slug={article.slug}
-              publishDate={article.data.publishDate}
-              heroImage={article.data.heroImage.src}
-              blogType={article.data.blogType}
-            />
-          ))
-        }
-      </div>
+      <BlogGrid articleList={articleList} client:load />
     </section>
   </main>
 </Layout>
