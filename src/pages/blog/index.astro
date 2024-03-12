@@ -26,8 +26,6 @@ const articleList = await getCollection("posts");
         </p>
       </div>
     </section>
-    <section class="mt-8">
-      <BlogGrid articleList={articleList} client:load />
-    </section>
+    <BlogGrid articleList={articleList} client:load />
   </main>
 </Layout>
