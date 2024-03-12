@@ -23,6 +23,7 @@ const BlogGrid = ({ articleList }: BlogGridProps) => {
         <p className="text-sm font-bold italic">Filter by</p>
         {filterBy.map(category => (
           <button
+            key={category}
             className={`rounded border border-black px-2 py-1 text-base text-black hover:bg-gray-300 dark:border-white dark:text-white dark:hover:bg-gray-600 ${category === categoryState ? "bg-gray-300 dark:bg-gray-600" : ""}`}
             onClick={() => setCategoryState(category)}
           >

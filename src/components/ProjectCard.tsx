@@ -74,6 +74,7 @@ const ProjectCard = ({
         <div className="flex items-center gap-4">
           {projectStacks.map(stack => (
             <img
+              key={stack}
               src={`/stacks/${theme}/${stack}.svg`}
               alt="stack"
               width={32}
