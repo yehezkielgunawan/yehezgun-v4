@@ -29,7 +29,7 @@ const currentURL = Astro.url.pathname;
       menuList.map(item => (
         <a
           href={item.url}
-          class={`font-bold ${currentURL === item.url ? "underline decoration-dashed underline-offset-4" : ""}`}
+          class={`font-bold text-xs md:text-base ${currentURL === item.url ? "underline decoration-dashed underline-offset-4" : ""}`}
         >
           {item.name}
         </a>
