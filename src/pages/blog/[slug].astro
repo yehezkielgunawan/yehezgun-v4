@@ -2,6 +2,9 @@
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { formatDate } from "scripts/formatDate";
+import ArticleCopyButton from "components/ArticleCopyButton";
 
 export interface Props {
   post: CollectionEntry<"posts">;
@@ -23,8 +26,36 @@ const OgURL = new URL(`/blog/${post.slug}.png`, Astro.url.origin).href;
 
 <Layout title={post.data.title} desc={post.data.shortDesc} ogImage={OgURL}>
   <main>
-    <h1>Halo</h1>
-    <Content />
+    <section class="space-y-0.5">
+      <Image
+        src={post.data.heroImage}
+        alt="hero-image"
+        class="rounded-sm w-full"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="space-y-1">
+        <h3>{post.data.title}</h3>
+        <div class="flex items-end justify-between flex-wrap gap-4">
+          <div class="flex items-center gap-4">
+            <p class="italic">{formatDate(post.data.publishDate)}</p>
+            <p
+              class="bg-black text-white dark:bg-white dark:text-black rounded py-0.5 px-1 font-semibold text-xs md:text-sm"
+            >
+              {
+                post.data.blogType.charAt(0).toUpperCase() +
+                  post.data.blogType.slice(1)
+              }
+            </p>
+          </div>
+          <ArticleCopyButton title={post.data.title} client:load />
+        </div>
+      </div>
+    </section>
+    <hr class="mt-2" />
+    <section>
+      <Content />
+    </section>
   </main>
 </Layout>
 

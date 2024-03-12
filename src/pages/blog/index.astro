@@ -35,6 +35,7 @@ const articleList = await getCollection("posts");
               slug={article.slug}
               publishDate={article.data.publishDate}
               heroImage={article.data.heroImage.src}
+              blogType={article.data.blogType}
             />
           ))
         }
