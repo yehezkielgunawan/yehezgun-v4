@@ -18,9 +18,10 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await post.render();
+const OgURL = new URL(`/blog/${post.slug}.png`, Astro.url.origin).href;
 ---
 
-<Layout title={post.data.title} desc={post.data.shortDesc}>
+<Layout title={post.data.title} desc={post.data.shortDesc} ogImage={OgURL}>
   <main>
     <h1>Halo</h1>
     <Content />
