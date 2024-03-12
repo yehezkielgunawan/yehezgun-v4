@@ -12,13 +12,14 @@ export async function getStaticPaths() {
     params: { slug: post.slug },
     props: { post },
   }));
-  return [...postResult];
+  return postResult;
 }
 
-export const GET: APIRoute = async ({ props }) =>
-  new Response(
-    await generateOGImageForPost(props as CollectionEntry<"posts">),
+export const GET: APIRoute = async ({ props }) => {
+  return new Response(
+    await generateOGImageForPost(props.post as CollectionEntry<"posts">),
     {
       headers: { "Content-Type": "image/png" },
     },
   );
+};
