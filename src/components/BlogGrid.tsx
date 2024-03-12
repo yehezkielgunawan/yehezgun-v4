@@ -20,11 +20,11 @@ const BlogGrid = ({ articleList }: BlogGridProps) => {
   return (
     <section className="mt-8">
       <div className="flex items-center justify-end gap-4">
-        <p className="text-sm font-bold italic">Filter by</p>
+        <p className="text-xs font-bold italic md:text-sm">Filter by</p>
         {filterBy.map(category => (
           <button
             key={category}
-            className={`rounded border border-black px-2 py-1 text-base text-black hover:bg-gray-300 dark:border-white dark:text-white dark:hover:bg-gray-600 ${category === categoryState ? "bg-gray-300 dark:bg-gray-600" : ""}`}
+            className={`rounded border border-black px-2 py-1 text-sm text-black hover:bg-gray-300 dark:border-white dark:text-white dark:hover:bg-gray-600 md:text-base ${category === categoryState ? "bg-gray-300 dark:bg-gray-600" : ""}`}
             onClick={() => setCategoryState(category)}
           >
             {category}
@@ -32,7 +32,7 @@ const BlogGrid = ({ articleList }: BlogGridProps) => {
         ))}
       </div>
       {filteredArticle.length > 0 ? (
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3">
           {filteredArticle.map(article => (
             <BlogCard
               key={article.slug}
