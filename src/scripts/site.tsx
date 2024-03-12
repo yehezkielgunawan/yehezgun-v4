@@ -69,8 +69,8 @@ function siteOgImage() {
                 overflow: "hidden",
               }}
             >
-              An online portfolio & personal site, made using Astro + Tailwind
-              CSS.
+              This is my online portfolio & personal site, made using Astro +
+              Tailwind CSS.
             </p>
           </div>
           <div
@@ -92,12 +92,14 @@ function siteOgImage() {
               >
                 "
               </span>
-              <span style={{ overflow: "hidden", fontWeight: "bold" }}>
+              <span
+                style={{ overflow: "hidden", fontWeight: "bold", fontSize: 18 }}
+              >
                 Yehezkiel Gunawan
               </span>
             </span>
 
-            <span style={{ overflow: "hidden", fontWeight: 300, fontSize: 16 }}>
+            <span style={{ overflow: "hidden", fontWeight: 300, fontSize: 18 }}>
               yehezgun.com
             </span>
           </div>

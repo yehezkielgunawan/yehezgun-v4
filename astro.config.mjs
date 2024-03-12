@@ -8,6 +8,7 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://v4.yehezgun.com/",
   integrations: [
     tailwind(),
     react(),
