@@ -56,6 +56,23 @@ const OgURL = new URL(`/blog/${post.slug}.png`, Astro.url.origin).href;
     <section>
       <Content />
     </section>
+    <section mt-8>
+      <script
+        src="https://giscus.app/client.js"
+        data-repo="yehezkielgunawan/yehezgun-v4"
+        data-repo-id={import.meta.env.PUBLIC_REPO_ID}
+        data-category="General"
+        data-category-id={import.meta.env.PUBLIC_CATEGORY_ID}
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark_dimmed"
+        data-lang="en"
+        crossorigin="anonymous"
+        async></script>
+    </section>
   </main>
 </Layout>
 
