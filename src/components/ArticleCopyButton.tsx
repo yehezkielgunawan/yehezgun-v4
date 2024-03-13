@@ -22,7 +22,7 @@ const ArticleCopyButton = ({ title }: ArticleCopyButtonProps) => {
   return (
     <div className="flex items-center gap-4">
       <button
-        className="flex w-44 items-center justify-center gap-2 rounded bg-black p-1 text-sm font-semibold text-white hover:shadow-md hover:shadow-gray-600 dark:bg-white dark:text-black dark:hover:shadow-gray-200"
+        className="flex items-center justify-center gap-2 rounded bg-black p-1 text-xs font-semibold text-white hover:shadow-md hover:shadow-gray-600 dark:bg-white dark:text-black dark:hover:shadow-gray-200 md:text-sm"
         onClick={() => handleCopyLink()}
       >
         {isCopied ? (
@@ -33,14 +33,14 @@ const ArticleCopyButton = ({ title }: ArticleCopyButtonProps) => {
         ) : (
           <>
             <FaCopy size={16} />
-            Copy Article Link
+            Copy Blog Link
           </>
         )}
       </button>
       <a
         href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(twitterCaption)}&url=${twitterUrl}`}
         target="_blank"
-        className="flex items-center justify-center gap-2 rounded bg-black p-1 text-sm text-white hover:shadow-md hover:shadow-gray-600 dark:bg-white dark:text-black dark:hover:shadow-gray-200"
+        className="flex items-center justify-center gap-2 rounded bg-black p-1 text-xs text-white hover:shadow-md hover:shadow-gray-600 dark:bg-white dark:text-black dark:hover:shadow-gray-200 md:text-sm"
       >
         <FaTwitter size={16} /> Share to Twitter
       </a>
