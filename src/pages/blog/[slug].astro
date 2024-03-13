@@ -5,6 +5,7 @@ import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import { formatDate } from "scripts/formatDate";
 import ArticleCopyButton from "components/ArticleCopyButton";
+import { BiChevronLeft } from "react-icons/bi";
 
 export interface Props {
   post: CollectionEntry<"posts">;
@@ -56,7 +57,15 @@ const OgURL = new URL(`/blog/${post.slug}.png`, Astro.url.origin).href;
     <section>
       <Content />
     </section>
-    <section mt-8>
+    <section class="mt-4">
+      <a
+        href="/blog"
+        class="w-full border rounded p-2 text-center flex items-center justify-center gap-4 border-black dark:border-white hover:bg-gray-200 dark:hover:bg-gray-600"
+      >
+        <BiChevronLeft size={24} /> Back to Blog Pages</a
+      >
+    </section>
+    <section class="mt-8">
       <script
         src="https://giscus.app/client.js"
         data-repo="yehezkielgunawan/yehezgun-v4"
