@@ -84,7 +84,7 @@ function postOgImage(post: CollectionEntry<"posts">) {
               fontSize: 28,
             }}
           >
-            <span style={{ fontSize: 16 }}>
+            <span style={{ fontSize: 18 }}>
               by{" "}
               <span
                 style={{
@@ -98,7 +98,7 @@ function postOgImage(post: CollectionEntry<"posts">) {
               </span>
             </span>
 
-            <span style={{ overflow: "hidden", fontWeight: 300, fontSize: 16 }}>
+            <span style={{ overflow: "hidden", fontWeight: 300, fontSize: 18 }}>
               yehezgun.com
             </span>
           </div>
