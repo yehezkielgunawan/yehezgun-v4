@@ -8,7 +8,7 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  site: import.meta.env.PUBLIC_SITE,
+  site: process.env.PUBLIC_SITE,
   integrations: [
     tailwind(),
     react(),
