@@ -1,4 +1,4 @@
-function siteOgImage() {
+function siteOgImage(queryParam: URLSearchParams) {
   return (
     <div
       style={{
@@ -50,28 +50,52 @@ function siteOgImage() {
             color: "white",
           }}
         >
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <p
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              width: "88%",
+            }}
+          >
+            <div
               style={{
-                fontSize: 52,
-                fontWeight: "bold",
-                maxHeight: "50%",
-                overflow: "hidden",
+                display: "flex",
+                flexDirection: "column",
+                width: queryParam.get("siteImg") ? "82%" : "88%",
               }}
             >
-              Hello there!
-            </p>
-            <p
-              style={{
-                fontSize: 24,
-                fontWeight: 300,
-                maxHeight: "50%",
-                overflow: "hidden",
-              }}
-            >
-              This is my online portfolio & personal site, made using Astro +
-              Tailwind CSS.
-            </p>
+              <p
+                style={{
+                  fontSize: 52,
+                  fontWeight: "bold",
+                  maxHeight: "50%",
+                  overflow: "hidden",
+                }}
+              >
+                {queryParam.get("title") || "Hello There!"}
+              </p>
+              <p
+                style={{
+                  fontSize: 24,
+                  fontWeight: 300,
+                  maxHeight: "50%",
+                  overflow: "hidden",
+                }}
+              >
+                {queryParam.get("desc") ||
+                  `This is my online portfolio & personal site, made using Astro +
+                Tailwind CSS.`}
+              </p>
+            </div>
+            {queryParam.get("siteImg") && (
+              <img
+                src={queryParam.get("siteImg") as string}
+                alt="test"
+                width="256"
+                height="256"
+              />
+            )}
           </div>
           <div
             style={{
@@ -100,7 +124,7 @@ function siteOgImage() {
             </span>
 
             <span style={{ overflow: "hidden", fontWeight: 300, fontSize: 18 }}>
-              yehezgun.com
+              {queryParam.get("siteName") || `yehezgun.com`}
             </span>
           </div>
         </div>

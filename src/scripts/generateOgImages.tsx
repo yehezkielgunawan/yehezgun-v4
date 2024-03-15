@@ -53,7 +53,8 @@ export async function generateOGImageForPost(post: CollectionEntry<"posts">) {
   return svgBufferToPngBuffer(svg);
 }
 
-export async function generateOGImageForSite() {
-  const svg = await satori(siteOgImage(), options);
+export async function generateOGImageForSite(queryParam: URLSearchParams) {
+  console.log(queryParam);
+  const svg = await satori(siteOgImage(queryParam), options);
   return svgBufferToPngBuffer(svg);
 }
