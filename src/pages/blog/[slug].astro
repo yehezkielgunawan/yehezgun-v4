@@ -49,7 +49,7 @@ const OgURL = new URL(`/blog/${post.slug}.png`, Astro.url.origin).href;
               }
             </p>
           </div>
-          <ArticleCopyButton title={post.data.title} client:load />
+          <ArticleCopyButton title={post.data.title} client:only />
         </div>
       </div>
     </section>
