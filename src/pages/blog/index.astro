@@ -3,7 +3,10 @@ import { getCollection } from "astro:content";
 import Layout from "layouts/Layout.astro";
 import BlogGrid from "components/BlogGrid";
 
-const articleList = await getCollection("posts");
+const articleList = (await getCollection("posts")).sort(
+  (a, b) =>
+    Number(new Date(b.data.publishDate)) - Number(new Date(a.data.publishDate)),
+);
 ---
 
 <Layout

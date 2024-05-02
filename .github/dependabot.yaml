@@ -1,10 +1,10 @@
 version: 2
 updates:
   # Enable version updates for pnpm
-  - package-ecosystem: "pnpm"
+  - package-ecosystem: "npm"
     # Look for `pnpm-lock.yaml` files in the `root` directory
     directory: "/"
     # Check the npm registry for updates every day (weekdays)
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     versioning-strategy: increase-if-necessary
