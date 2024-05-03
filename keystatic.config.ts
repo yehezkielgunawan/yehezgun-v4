@@ -9,7 +9,7 @@ export default config({
     posts: collection({
       label: "Posts",
       slugField: "title",
-      path: "src/content/posts/**",
+      path: "src/content/posts/*",
       format: { contentField: "content" },
       schema: {
         title: fields.slug({
@@ -39,8 +39,8 @@ export default config({
           dividers: true,
           links: true,
           images: {
-            directory: "src/content/posts/_images",
-            publicPath: "/src/content/posts/_images/",
+            directory: "public/content/posts/_images",
+            publicPath: "/content/posts/_images/",
           },
         }),
       },

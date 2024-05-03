@@ -9,7 +9,8 @@
       "styles/*": ["styles/*"],
       "layouts/*": ["layouts/*"],
       "scripts/*": ["scripts/*"],
-      "content/*": ["content/*"]
+      "content/*": ["content/*"],
+      "assets/*": ["assets/*"],
     }
   }
 }
