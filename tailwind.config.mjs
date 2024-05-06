@@ -6,12 +6,11 @@ export default {
   darkMode: "class",
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    colors: {
-      black: colors.black,
-      white: colors.white,
-      ...colors,
-    },
     extend: {
+      colors: {
+        black: colors.black,
+        white: colors.white,
+      },
       fontFamily: {
         sans: ["IBM Plex Mono", ...defaultTheme.fontFamily.mono],
       },
