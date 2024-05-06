@@ -109,4 +109,10 @@ const OgURL = new URL(`/blog/${post.slug}.png`, Astro.url.origin).href;
     border-radius: 6px;
     padding: 8px;
   }
+  /* style <a> tag inside the <p> tag */
+  p > a {
+    text-decoration: underline dashed;
+    font-weight: 600;
+    text-underline-offset: 2px;
+  }
 </style>
