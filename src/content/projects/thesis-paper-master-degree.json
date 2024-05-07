@@ -1,0 +1,11 @@
+{
+  "name": "Thesis Paper (Master Degree)",
+  "projectDesc": "This is my published thesis paper from my graduate degree.",
+  "projectIcon": "/src/content/projects/thesis-paper-master-degree/projectIcon.png",
+  "projectHeroImage": "/src/content/projects/thesis-paper-master-degree/projectHeroImage.png",
+  "stacks": [
+    "python"
+  ],
+  "projectUrl": "https://tunasbangsa.ac.id/pkm/index.php/kesatria/article/view/349/346",
+  "isFeatured": true
+}

@@ -60,7 +60,7 @@ export default config({
           label: "Project Icon",
           validation: { isRequired: true },
           directory: "src/content/projects/",
-          publicPath: "../",
+          publicPath: "/src/content/projects/",
         }),
         projectHeroImage: fields.image({
           label: "Project Hero Image",

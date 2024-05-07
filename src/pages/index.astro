@@ -54,7 +54,11 @@ const featuredProjects = await getCollection("projects", ({ data }) => {
               target="_blank"
             >
               {project.data.projectHeroImage && (
-                <Image src={project.data.projectHeroImage} alt="project-hero" />
+                <Image
+                  src={project.data.projectHeroImage}
+                  alt="project-hero"
+                  class="w-full h-48 object-cover"
+                />
               )}
               <h5 class="absolute bottom-0 p-0.5 left-1/2 -translate-x-1/2 w-full bg-slate-700/60 text-white group-hover:underline group-hover:underline-offset-4 group-hover:decoration-dashed">
                 {project.data.name}
