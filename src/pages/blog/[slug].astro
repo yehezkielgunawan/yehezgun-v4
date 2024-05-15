@@ -31,7 +31,7 @@ const OgURL = new URL(`/blog/${post.slug}.png`, Astro.url.origin).href;
       <Image
         src={post.data.heroImage}
         alt="hero-image"
-        class="rounded-sm w-full"
+        class="rounded-sm w-full object-cover h-96 sm:h-72 md:h-96 lg:h-96 xl:h-96"
         loading="lazy"
         decoding="async"
       />
@@ -93,6 +93,7 @@ const OgURL = new URL(`/blog/${post.slug}.png`, Astro.url.origin).href;
   h5,
   h6 {
     margin-top: 32px;
+    font-weight: bolder;
   }
   p {
     margin-top: 12px;
