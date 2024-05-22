@@ -15,7 +15,7 @@ export default defineConfig({
     markdoc(),
     process.env.SKIP_KEYSTATIC === "true" ? null : keystatic(),
   ],
-  output: process.env.SKIP_KEYSTATIC === "true" ? "hybrid" : "static",
+  output: process.env.SKIP_KEYSTATIC === "true" ? "static" : "hybrid",
   adapter: vercel(),
   trailingSlash: "never",
 });
