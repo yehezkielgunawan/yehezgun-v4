@@ -13,9 +13,9 @@ export default defineConfig({
     tailwind(),
     react(),
     markdoc(),
-    process.env.SKIP_KEYSTATIC ? null : keystatic(),
+    process.env.SKIP_KEYSTATIC === "true" ? null : keystatic(),
   ],
-  output: process.env.SKIP_KEYSTATIC ? "hybrid" : "static",
+  output: process.env.SKIP_KEYSTATIC === "true" ? "hybrid" : "static",
   adapter: vercel(),
   trailingSlash: "never",
 });
