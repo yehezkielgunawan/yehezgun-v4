@@ -4,7 +4,7 @@ import react from "@astrojs/react";
 import markdoc from "@astrojs/markdoc";
 import keystatic from "@keystatic/astro";
 
-import vercel from "@astrojs/vercel/static";
+import vercel from "@astrojs/vercel/server";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,7 +15,7 @@ export default defineConfig({
     markdoc(),
     process.env.SKIP_KEYSTATIC === "true" ? null : keystatic(),
   ],
-  output: process.env.SKIP_KEYSTATIC === "true" ? "static" : "hybrid",
+  output: process.env.SKIP_KEYSTATIC === "true" ? "server" : "hybrid",
   adapter: vercel(),
   trailingSlash: "never",
 });
